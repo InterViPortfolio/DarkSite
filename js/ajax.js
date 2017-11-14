@@ -30,6 +30,12 @@ if (!isLoaded) {
     }
 }
 
+if (device.mobile() && document.body.clientWidth >= 1050) {
+    $.ajax({url: '/css/mobile.css', async: true}).done(function(mcss) {
+        $('#head').append('<style id=\'jsmobile\'>' + mcss.substring(mcss.indexOf('{') + 1, mcss.lastIndexOf('}')) + '</style>');
+    });
+}
+
 function loadComments() {
     $.ajax({url: '/parts/comments.html', async: true}).done(function(html) {
         $('#middle').append(html);
