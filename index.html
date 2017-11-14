@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html data-page='index'>
+    <head>
+        <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+        <title>Портфолио InterVi</title>
+        <meta name='description' content='Тут будет что-то очень интересное.' />
+        <meta name='keywords' content='InterVi' />
+        <link rel='shortcut icon' type='image/x-icon' href='/images/favicon.ico' />
+        <link rel='stylesheet' id='main-style' href='/css/style.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='mobile-style' href='/css/mobile.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='prism-style' href='/css/prism.css' type='text/css' media='all' />
+        <script type='text/javascript' src='/js/jquery-3.2.1.min.js'></script>
+        <script type='text/javascript'>var isLoaded = false;</script>
+    </head>
+    <body>
+        <div>
+            <header class='lightbox'>
+                <div id='left-links' class='cont-links'>
+                    <a href='mailto:intervionly@gmail.com' target='_blank'><img src='/images/mail.png' class='cont-img' alt='InterVi email' /></a>
+                    <a href='https://vk.com/id453972649' target='_blank'><img src='/images/vk.png' class='cont-img' alt='InterVi VK' /></a>
+                </div>
+                <div id='right-links' class='cont-links'>
+                    <a href='javascript: void(0)' onclick='showSkype()'><img src='/images/skype.png' class='cont-img' alt='InterVi skype' /></a>
+                    <a href='https://github.com/InterViPortfolio' target='_blank'><img src='/images/github.png' class='cont-img' alt='InterVi github' /></a>
+                </div>
+                <h1><a href='/index.html'>Пример сайта</a></h1>
+            </header>
+            <div id='skype-box'>
+                <div class='center'>
+                    <b id='skype-title'>Skype логин</b><br/>
+                    <input id='skype-text' class='input inhover' type='text' value='intervionly@gmail.com' onclick='this.select()' />
+                    <input id='skype-close' type='button' value='Закрыть' onclick='closeSkype()' />
+                </div>
+            </div>
+            <div id='top-menu' class='lightbox'>
+                <div class='tm-cat'>
+                    <ul class='ul-top-menu'>
+                        <li>
+                            <a href='#'>Категория 1</a>
+                            <div class='utm-box'>
+                                <div class='utms-top cline'></div>
+                                <ul class='ul-top-menu-sub'>
+                                    <li><a href='#'>Пункт 1</a></li>
+                                    <li><a href='#'>Пункт 2</a></li>
+                                    <li><a href='#'>Пункт 3</a></li>
+                                    <li><a href='#'>Пункт 4</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class='tm-cat'>
+                    <ul class='ul-top-menu'>
+                        <li>
+                            <a href='#'>Категория 2</a>
+                            <div class='utm-box'>
+                                <div class='utms-top cline'></div>
+                                <ul class='ul-top-menu-sub'>
+                                    <li><a href='#'>Пункт 1</a></li>
+                                    <li><a href='#'>Пункт 2</a></li>
+                                    <li><a href='#'>Пункт 3</a></li>
+                                    <li><a href='#'>Пункт 4</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class='tm-cat'>
+                    <ul class='ul-top-menu'>
+                        <li>
+                            <a href='#'>Категория 3</a>
+                            <div class='utm-box'>
+                                <div class='utms-top cline'></div>
+                                <ul class='ul-top-menu-sub'>
+                                    <li><a href='#'>Пункт 1</a></li>
+                                    <li><a href='#'>Пункт 2</a></li>
+                                    <li><a href='#'>Пункт 3</a></li>
+                                    <li><a href='#'>Пункт 4</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id='main'>
+                <div id='left-side' class='lightbox'>
+                    <div class='side-block'>
+                        <div class='side-title'>
+                            <b>Пример сайта</b>
+                        </div>
+                        <div class='side-content scolor'>
+                            <p>Это пример вёрстки статейного сайта, все штуки не рабочие.</p>
+                            <p>Возможно он будет использован для чего-то настоящего. Когда-нибудь...</p>
+                        </div>
+                        <div class='side-bottom cline'></div>
+                    </div>
+                    <div class='side-block'>
+                        <div class='side-title'>
+                            <b>Навигация</b>
+                        </div>
+                        <div class='side-content scolor'>
+                            <ul class='ul-menu'>
+                                <li><a href='/index.html'>Главная</a></li>
+                                <li><a href='/article.html'>Пример статьи</a></li>
+                                <li><a href='/404.html'>Ошибка 404</a></li>
+                            </ul>
+                        </div>
+                        <div class='side-bottom cline'></div>
+                    </div>
+                    <script type='text/javascript'>
+                        $.ajax({url: '/parts/login.html', async: true}).done(function(html) {
+                            $('#left-side').append(html);
+                            $('#login-block').show();
+                            $('#login-block').css('opacity', '1');
+                        });
+                    </script>
+                </div>
+                <div id='jsproblem' class='lightbox fullbox'>
+                    <p>Кажется, у вас проблемы с <b>JavaScript</b> или подключением к серверу. Тут всё на <i>AJAX</i>, это грёбаная современная вёрстка :'(</p>
+                </div>
+                <div id='middle'></div>
+            </div>
+            <footer class='lightbox'>
+                <div id='footer'>
+                    Copyright <a href='mailto:intervionly@gmail.com'>InterVi</a> 2017
+                </div>
+            </footer>
+            <img id='uplink' alt='UP' src='/images/up.png' onclick='toTop()' />
+        </div>
+        <script type='text/javascript' src='/js/prism.js'></script>
+        <script type='text/javascript' src='/js/device.min.js'></script>
+        <script type='text/javascript' src='/js/ajax.js' class='loader'></script>
+        <script type='text/javascript' src='/js/main.js'></script>
+    </body>
+</html>

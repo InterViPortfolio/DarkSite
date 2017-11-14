@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html data-page='page'>
+    <head>
+        <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+        <title>Регистрация | Портфолио InterVi</title>
+        <meta name='description' content='Пример регистрации на сайте.' />
+        <meta name='keywords' content='InterVi, регистрация' />
+        <link rel='shortcut icon' type='image/x-icon' href='/images/favicon.ico' />
+        <link rel='stylesheet' id='main-style' href='/css/style.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='mobile-style' href='/css/mobile.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='prism-style' href='/css/prism.css' type='text/css' media='all' />
+        <script type='text/javascript' src='/js/jquery-3.2.1.min.js'></script>
+        <script type='text/javascript'>var isLoaded = false;</script>
+    </head>
+    <body>
+        <main>
+            <div class='lightbox fullbox' id='register'>
+                <h2>Регистрация</h2>
+                <p>Никакой регистрации тут, конечно, нет. Но вы можете посмотреть пример того, как бы она происходила на реальном сайте.</p>
+                <p class='udata'>
+                    <span class='row'>
+                        <span class='coll'>Ник</span>
+                        <input class='input inhover indata colr' name='uname' id='uname' type='text' onchange='nickChange()' />
+                    </span>
+                    <span class='row'>
+                        <span class='coll'>Пароль</span>
+                        <input class='input inhover indata colr' name='upass1' id='upass1' type='password' />
+                    </span>
+                    <span class='row'>
+                        <span class='coll'>Повтор пароля</span>
+                        <input class='input inhover indata colr' name='upass2' id='upass2' type='password' onchange='passChange()' />
+                    </span>
+                    <span class='row'>
+                        <span class='coll'>Почта</span>
+                        <input class='input inhover indata colr' name='uemail' id='uemail' type='text' onchange='emailChange()' />
+                    </span>
+                    <span class='row'>
+                        <input id='rulchbox' name='rulchbox' type='checkbox' />
+                        <label for='rulchbox' id='rullabel'>Принимаю <a href='javascript: void(0)' onclick='showRules()'>правила</a></label>
+                    </span>
+                    <span class='row'>
+                        <input class='green-button' name='reg-button' id='reg-button' type='button' value='Регистрация' onclick='register()' />
+                    </span>
+                </p>
+            </div>
+            <script type='text/javascript'>
+                document.title = 'Регистрация | Портфолио InterVi';
+            </script>
+        </main>
+        <script type='text/javascript' src='/js/prism.js'></script>
+        <script type='text/javascript' src='/js/device.min.js'></script>
+        <script type='text/javascript' src='/js/ajax.js' class='loader'></script>
+        <script type='text/javascript' src='/js/main.js'></script>
+    </body>
+</html>

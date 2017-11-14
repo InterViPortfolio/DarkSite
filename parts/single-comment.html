@@ -1,0 +1,18 @@
+<div class='comment lightbox fullbox'>
+    <div class='comtop cline'></div>
+    <div class='comtext'>{comtext}</div>
+    <div class='comright'>
+        <div class='cominfo'>
+            <div class='comnick'>{comnick}</div>
+            <div class='comdate'>{comdate}</div>
+            <img class='comava' src='/images/profile.png' alt='InterVi avatar' />
+        </div>
+        <div class='combuttons'>
+            <input class='comedit-button input button' name='comedit-button' type='button' value='Редактировать' onclick='editComment(this)' />
+            <input class='comdel-button input button' name='comdel-button' type='button' value='Удалить' onclick='delComment(this)' />
+            <p class='del-confirm'>
+                Вы уверены? <a href='javascript: void(0)' onclick='cdelComment(this)'>Да</a> / <a href='javascript: void(0)' onclick='noDelComment(this)'>Нет</a>
+            </p>
+        </div>
+    </div>
+</div>

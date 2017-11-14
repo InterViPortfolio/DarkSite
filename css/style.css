@@ -1,0 +1,132 @@
+/* СТРАНИЦА */
+body {margin: 0; padding: 0; color: #D4CAAB; font-family: sefif; font-size: 16px; background: url(/images/bg.jpg) no-repeat #15151D; background-size: cover; background-position: center; background-attachment: fixed; overflow-x: hidden;}
+a {color: #E6F5E9; text-decoration: none; border-bottom: 1px solid #E6F5E9; transition: all 400ms linear;}
+a:hover {border-top: 1px dashed #E6F5E9; border-bottom: 1px dashed #E6F5E9; text-shadow: 0 0 10px #BEEDC6;}
+a:active {border: 1px dotted #E6F5E9; color: white; font-weight: bold;}
+a, a:hover, a:active, input, input:hover, input:active {outline: none;}
+p {padding: 5px;}
+h1, h2, h3, h4, h5, h6 {text-align: center; color: white; font-weight: bold; margin-top: 20px; margin-bottom: 10px;}
+h1 {font-size: 36px;}
+h2 {font-size: 32px;}
+h3 {font-size: 28px;}
+h4 {font-size: 24px;}
+h5 {font-size: 20px;}
+h6 {font-size: 18px;}
+b, i, u, em, strong {color: white;}
+blockquote, pre {margin: 10px auto !important; width: 90% !important; padding: 10px; border: 1px dashed #302222; border-radius: 10px;}
+blockquote {font-family: sans;}
+code {padding: 3px; color: #E3B8B3; border: 1px solid #302222; border-radius: 4px; font-family: monospace;}
+pre {font-family: monospace; font-size: 14px; color: #E3B8B3;}
+header, footer {margin: 10px auto; padding: 5px; clear: both;}
+header {width: 600px; height: 90px; border-radius: 10px; text-align: center; background: url(/images/header.jpg) no-repeat; background-size: cover; background-position: center;}
+footer {width: 300px; height: 20px; border-radius: 8px; opacity: 0.95; background: black; font-size: 12px;}
+/* ОБЩИЕ КЛАССЫ */
+.lightbox {box-shadow: 0 0 10px white;}
+.fullbox {width: 800px; float: right; margin: 10px 10px 20px 10px; border-radius: 10px; opacity: 0.9; padding: 10px; background: black;}
+.cline {border-radius: 3px; height: 3px; border: 1px solid #302222; margin-bottom: 5px;}
+.scolor {background: black; border-radius: 6px; padding: 4px 0; border: 1px dashed #302222;}
+.input {text-align: center; border: 1px solid #302222; background: black; color: #57BD69; font-size: 12px;}
+.inhover {width: 160px; height: 18px; margin: 3px auto; transition: all 300ms linear;}
+.inhover:hover {opacity: 0.6;}
+.button {height: 20px; margin-top: 6px; padding: 0; box-shadow: 0 0 6px white; cursor: pointer; transition: all 160ms linear;}
+.button:hover {box-shadow: 0 0 0 white; opacity: 0.7;}
+.button:active {box-shadow: 0 0 4px white inset;}
+.green-button {width: 120px !important;}
+.errtext {color: #E09999;}
+.cimg {display: block; margin: 0 auto;}
+.big-img {border: 1px solid #302222; border-radius: 10px;}
+.errtext, #username {font-weight: bold;}
+/* КНОПКИ КОНТАКТОВ */
+.cont-links a, .cont-links a:hover, .cont-links a:active {border: none; font-weight: normal;}
+#left-links, #right-links {position: relative; top: 15px;}
+#left-links {left: -200px; float: left;}
+#right-links {right: -200px; float: right;}
+.cont-img {opacity: 0.6; transform: rotate(0deg); transition: all 1s ease;}
+.cont-img:hover {transform: rotate(360deg); opacity: 1;}
+/* ОКНО СКАЙПА */
+#skype-box {position: fixed; left: calc(50% - 100px); top: 40%; width: 0px; height: 0px; padding: 5px; border-radius: 10px; border: 1px solid white; box-shadow: 0 0 10px white; background: black; display: none; opacity: 0; z-index: 2;}
+.center {margin: auto; text-align: center;}
+#skype-text {width: 170px; height: 30px; padding: 3px; margin-top: 20px !important; border: 1px solid #B58988; color: black; background: #D6B7B6; text-align: center; font-size: 12px; border-radius: 6px; text-shadow: 0 2px 4px black;}
+#skype-close, .green-button {width: 80px; height: 30px; margin-top: 10px; cursor: pointer; font-size: 12px; border: 1px solid white; border-radius: 4px; box-shadow: 0 0 6px white; background: #92961B; color: black; display: block; margin-left: auto; margin-right: auto; transition: all 200ms linear;}
+#skype-close:hover, .green-button:hover {box-shadow: 0 0 0 white;}
+#skype-close:active, .green-button:active {box-shadow: 0 0 6px black inset;}
+/* ГЛАВНЫЕ ЭЛЕМЕНТЫ */
+#footer {margin: auto auto; text-align: center; padding: 3px;}
+#main {width: 1050px; margin: 0 auto;}
+#middle {position: relative;}
+#content h3, h4, h5, h6 {width: 100%; border-bottom: 1px solid #302222;}
+.readmore {display: block; clear: both; margin: 10px; text-align: right;}
+.pre-img {max-height: 300px; max-width: 300px; border-radius: 10px; float: left; margin: 10px;}
+#err404 {text-align: center; font-size: 18px; font-weight: bold;}
+#shadow {position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; opacity: 0.1; z-index: 1;}
+#loading {position: fixed; top: calc(50% - 64px); left: calc(50% - 64px); z-index: 2; transform: rotate(0deg); opacity: 0.7;}
+/* ВЕРХНЕЕ МЕНЮ */
+#top-menu {width: 1050px; height: 32px; margin: 10px auto; border: 1px solid #302222; border-radius: 10px; text-align: center;}
+#top-menu ul {margin: 0; padding: 0; list-style-type: none;}
+#top-menu li {margin: 0; padding: 0;}
+#top-menu a, #top-menu a:hover, #top-menu a:active {text-shadow: none; border: 0;}
+.tm-cat {width: 120px; height: 16px; padding: 3px; margin: 5px auto; font-size: 12px; background: black; box-shadow: 0 0 4px white;}
+.tm-cat, .ul-top-menu-sub, .ul-top-menu-sub li {border-radius: 6px; transition: all 160ms ease;}
+.tm-cat, .ul-top-menu, .ul-top-menu li, .ul-top-menu li:hover .utm-box {display: inline-block;}
+.tm-cat:hover {box-shadow: 0 0 0 white;}
+.tm-cat:active {box-shadow: 0 0 3px white inset;}
+.ul-top-menu-sub {padding: 0 15px 15px 15px !important; margin: 0;}
+.utm-box {display: none; position: relative; top: 18px; z-index: 1; float: left; font-size: 14px; background: black; border: 1px solid #302222; opacity: 0.9;}
+.utms-top {margin: 10px 5px 0 5px;}
+.ul-top-menu-sub li {display: block; margin-top: 12px !important; background: #AEF5AF; color: black;}
+.ul-top-menu-sub li:hover {background: #7AF57C; box-shadow: 0 0 6px white;}
+.ul-top-menu-sub li:active {box-shadow: 0 0 4px black inset;}
+.ul-top-menu-sub a, .ul-top-menu-sub a:hover, .ul-top-menu-sub a:active {color: black; margin: 10px;}
+/* БОКОВОЕ МЕНЮ */
+#left-side {width: 200px; float: left; border-radius: 5px; opacity: 0.8; font-size: 12px; text-align: center;}
+.side-block {padding: 3px; margin: 5px auto;}
+.side-title {width: 180px; margin: auto; padding: 3px; background: black; border-bottom: 1px solid #302222; border-radius: 3px;}
+.side-content {margin: 5px auto;}
+.side-content p {margin: 8px 3px; padding: 0;}
+.side-bottom {margin-top: 10px;}
+.ul-menu {text-align: left; margin: 0; padding-left: 20px;}
+.ul-menu li {margin: 6px 0; list-style-type: circle; transition: all 100ms linear;}
+.ul-menu li:hover {list-style-type: disc; padding-left: 5px;}
+.ul-menu li:active {list-style-type: square;}
+/* ВИДЖЕТ ПРОФИЛЯ */
+#login-form {width: 180px; padding: 5px; margin: 0 auto;}
+#side-profile, #login-block {opacity: 0; display: none;}
+#profile-ava {dosplay: block; margin: 5px auto; clear: both;}
+#login-button, #exit-button {width: 70px;}
+#login-links {width: 100%; height: 16px; margin: 5px auto;}
+#reg-link, #res-link {font-size: 10px;}
+#reg-link {float: left;}
+#res-link {float: right;}
+#uplink {position: fixed; right: 30px; bottom: 30px; cursor: pointer; display: none; opacity: 0;}
+/* КОММЕНТАРИИ */
+.comment {margin-bottom: 5px;}
+.comment pre, .comment blockquote {width: 500px !important;}
+.comtext, .cominfo {padding: 5px; margin: 5px; border: 1px solid #302222; border-radius: 10px;}
+.comtext {float: left; width: 590px; font-size: 14px;}
+.comright {width: 180px; float: right;}
+.cominfo, .combuttons {width: 160px; margin: 0 auto;}
+.combuttons {margin-top: 15px !important;}
+.comnick, .comdate, .comava {text-align: center; margin: 0 auto;}
+.comnick {font-weight: bold;}
+.comdate {font-size: 10px;}
+.comava {clear: both; margin-top: 5px; max-width: 128px; max-height: 128px; display: block;}
+#comedit {width: 760px; height: 200px; border: 1px solid #302222; background: black; color: #57BD69; font-size: 12px; border-radius: 10px; display: block; clear: both; margin: 5px auto; padding: 5px;}
+.comedit-button, .comdel-button {margin: 10px auto; display: block;}
+.comedit-button {width: 130px;}
+.comdel-button {width: 110px;}
+.del-confirm {display: none; font-size: 12px; text-align: right;}
+.edarea {background: black; color: #D4CAAB; min-height: 160px;}
+/* РЕГИСТРАЦИЯ И ВОССТАНОВЛЕНИЯ ПАРОЛЯ */
+.row {display: block; width: 780px; text-align: center; margin: 10px auto; clear: both;}
+.coll, .colr {margin: 5px; text-align: left; display: inline-block; clear: none;}
+.coll {width: 110px;}
+.colr {width: 230px;}
+#rulchbox, #rullabel {cursor: pointer;}
+#rulchbox {position: relative; right: -35px;}
+#rullabel {margin-left: 40px;}
+.udata {font-size: 12px; color: white;}
+.indata {text-align: center;}
+#reg-button, #pass-button {margin-top: 30px;}
+.ierr {clear: both;}
+#rulbox {width: 800px; height: 500px; padding: 10px; opacity: 0.95; border: 1px solid #D68E85; border-radius: 10px; box-shadow: 0 0 16px white; background: black; z-index: 2; position: fixed; top: calc(50% - 250px); left: -150%;}
+#crul-button {position: absolute; bottom: 8px; left: calc(50% - 40px);}

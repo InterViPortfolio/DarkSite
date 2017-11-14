@@ -1,0 +1,29 @@
+@media all and (max-width: 1050px) {
+    /* СТРАНИЦА */
+    body {background-image: url(/images/bg.jpg) no-repeat; overflow-x: auto;}
+    header {width: 600px; height: 90px; background-image: url(/images/header.jpg) no-repeat;}
+    /* ОБЩИЕ КЛАССЫ */
+    .fullbox {width: 600px; float: none; margin: 10px auto;}
+    .input {text-align: center; border: 1px solid white; background: #BFB04D; color: black; font-size: 12px;}
+    .big-img {max-width: 560px;}
+    /* КНОПКИ КОНТАКТОВ */
+    #left-links {left: 0;}
+    #right-links {right: 0;}
+    /* ГЛАВНЫЕ ЭЛЕМЕНТЫ */
+    #main {width: 60%;}
+    /* ВЕРХНЕЕ МЕНЮ */
+    #top-menu {width: 600px;}
+    /* БОКОВОЕ МЕНЮ */
+    #left-side {width: 300px; float: none; margin: 10px auto; background: black;}
+    .side-title, #login-from {width: 35%;}
+    .ul-menu {text-align: center;}
+    /* КОММЕНТАРИИ */
+    .comment pre, .comment blockquote {width: 480px !important;}
+    .comtext {width: 580px; float: none; margin: 5px auto;}
+    .comright {width: 160px; float: none; margin: 15px auto;}
+    .cominfo, .combuttons {width: 150px;}
+    #comedit {width: 580px; height: 200px;}
+    /* РЕГИСТРАЦИЯ И ВОССТАНОВЛЕНИЯ ПАРОЛЯ */
+    .row {display: block; width: 580px;}
+    #rulbox {width: 90%; height: 90%; top: 4%;}
+}
