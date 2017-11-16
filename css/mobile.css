@@ -1,6 +1,6 @@
 @media all and (max-width: 1050px) {
     /* СТРАНИЦА */
-    body {background: url(/images/bg-mob.jpg) no-repeat #15151D; background-size: cover; background-position: center; background-attachment: fixed;; overflow-x: auto;}
+    body {background: url(/darksite/images/bg-mob.jpg) no-repeat #15151D; background-size: cover; background-position: center; background-attachment: fixed;; overflow-x: auto;}
     /* ОБЩИЕ КЛАССЫ */
     .fullbox {width: 600px; float: none; margin: 10px auto;}
     .input {text-align: center; border: 1px solid white; background: #BFB04D; color: black; font-size: 12px;}

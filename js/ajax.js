@@ -4,14 +4,14 @@ if (!isLoaded) {
     isLoaded = true;
     switch(page) {
         case 'index':
-            $.ajax({url: '/parts/notes.html', async: true}).done(function(html) {
+            $.ajax({url: '/darksite/parts/notes.html', async: true}).done(function(html) {
                 $('#middle').html(html);
                 $('#jsproblem').remove();
             });
             break;
         case 'article':
             var article = $('main').html();
-            $.ajax({url: '/index.html', async: true}).done(function(html) {
+            $.ajax({url: '/darksite/index.html', async: true}).done(function(html) {
                 $('body').html(getNode(getNode(html, 'body'), 'div'));
                 $('#middle').append(article);
                 loadComments();
@@ -21,7 +21,7 @@ if (!isLoaded) {
             break;
         case 'page':
             var article = $('main').html();
-            $.ajax({url: '/index.html', async: true}).done(function(html) {
+            $.ajax({url: '/darksite/index.html', async: true}).done(function(html) {
                 $('body').html(getNode(getNode(html, 'body'), 'div'));
                 $('#middle').append(article);
                 $('#jsproblem').remove();
@@ -31,43 +31,43 @@ if (!isLoaded) {
 }
 
 if (device.mobile() && document.body.clientWidth >= 1050) {
-    $.ajax({url: '/css/mobile.css', async: true}).done(function(mcss) {
+    $.ajax({url: '/darksite/css/mobile.css', async: true}).done(function(mcss) {
         $('#head').append('<style id=\'jsmobile\'>' + mcss.substring(mcss.indexOf('{') + 1, mcss.lastIndexOf('}')) + '</style>');
     });
 }
 
 function loadComments() {
-    $.ajax({url: '/parts/comments.html', async: true}).done(function(html) {
+    $.ajax({url: '/darksite/parts/comments.html', async: true}).done(function(html) {
         $('#middle').append(html);
         Prism.highlightAll(true);
-        $.ajax({url: '/parts/add-comment.html', async: true}).done(function(html2) {
+        $.ajax({url: '/darksite/parts/add-comment.html', async: true}).done(function(html2) {
             $('#middle').append(html2);
         });
     });
 }
 
 $(document).ready(function() {
-    $('body').on('click', '[href$=\'/article.html\']', function(event) {
+    $('body').on('click', '[href$=\'/darksite/article.html\']', function(event) {
         if (device.mobile() || event.ctrlKey || event.shiftKey || event.which == 2) return true;
         else movePage($('.content'), true, $(this).attr('href'), 'main', null, loadComments);
         return false;
     });
-    $('body').on('click', '[href$=\'/index.html\']', function(event) {
+    $('body').on('click', '[href$=\'/darksite/index.html\']', function(event) {
         if (device.mobile() || event.ctrlKey || event.shiftKey || event.which == 2) return true;
-        else movePage($('.content'), true, '/parts/notes.html', null, $(this).attr('href'));
+        else movePage($('.content'), true, '/darksite/parts/notes.html', null, $(this).attr('href'));
         return false;
     });
-    $('body').on('click', '[href$=\'/404.html\']', function(event) {
-        if (device.mobile() || event.ctrlKey || event.shiftKey || event.which == 2) return true;
-        else movePage($('.content'), true, $(this).attr('href'), 'main');
-        return false;
-    });
-    $('body').on('click', '[href$=\'/reg.html\']', function(event) {
+    $('body').on('click', '[href$=\'/darksite/404.html\']', function(event) {
         if (device.mobile() || event.ctrlKey || event.shiftKey || event.which == 2) return true;
         else movePage($('.content'), true, $(this).attr('href'), 'main');
         return false;
     });
-    $('body').on('click', '[href$=\'/restore.html\']', function(event) {
+    $('body').on('click', '[href$=\'/darksite/reg.html\']', function(event) {
+        if (device.mobile() || event.ctrlKey || event.shiftKey || event.which == 2) return true;
+        else movePage($('.content'), true, $(this).attr('href'), 'main');
+        return false;
+    });
+    $('body').on('click', '[href$=\'/darksite/restore.html\']', function(event) {
         if (device.mobile() || event.ctrlKey || event.shiftKey || event.which == 2) return true;
         else movePage($('.content'), true, $(this).attr('href'), 'main');
         return false;
@@ -114,7 +114,7 @@ function loginClick() {
     }
     $('#login-block').stop().animate({opacity: '-=1'}, 'slow', function() {
         $('#login-block').remove();
-        $.ajax({url: '/parts/profile.html', async: true}).done(function(html) {
+        $.ajax({url: '/darksite/parts/profile.html', async: true}).done(function(html) {
             $('#left-side').append(html);
             $('#username').text(nick);
             $('#side-profile').show();
@@ -135,7 +135,7 @@ function addComment() {
         return;
     }
     name = name.text();
-    $.ajax({url: '/parts/single-comment.html', async: true}).done(function(html) {
+    $.ajax({url: '/darksite/parts/single-comment.html', async: true}).done(function(html) {
         html = html.replace('{comtext}', text).replace('{comnick}', name).replace('{comdate}', getStrDate());
         $('#comedit').val(null);
         $('#comments').append(html);
@@ -153,7 +153,7 @@ function getStrDate() {
 function exitClick() {
     $('#side-profile').stop().animate({opacity: '-=1'}, 'slow', function() {
         $('#side-profile').remove();
-        $.ajax({url: '/parts/login.html', async: true}).done(function(html) {
+        $.ajax({url: '/darksite/parts/login.html', async: true}).done(function(html) {
             $('#left-side').append(html);
             $('#login-block').show();
             $('#login-block').stop().animate({opacity: '+=1'}, 'slow');
@@ -179,14 +179,14 @@ function register() {
         $('#reg-button').parent().append('<p class=\'errtext\'>Нужно принять правила.</p>');
         return;
     }
-    $('#register').append('<div id=\'shadow\'></div><img id=\'loading\' alt=\'Loading...\' src=\'/images/loading.png\' />');
+    $('#register').append('<div id=\'shadow\'></div><img id=\'loading\' alt=\'Loading...\' src=\'/darksite/images/loading.png\' />');
     setTimeout(rotate, 10, '#loading', 1, 10);
     setTimeout(function() {
-        $.ajax({url: '/parts/regdone.html', async: true}).done(function(html) {
+        $.ajax({url: '/darksite/parts/regdone.html', async: true}).done(function(html) {
             $('#shadow').remove();
             $('#loading').remove();
             $('#register').html(html.replace('{name}', $('#uname').val()));
-            if (device.mobile()) $('#register .big-img').attr('src', '/images/cat-mob.jpg');
+            if (device.mobile()) $('#register .big-img').attr('src', '/darksite/images/cat-mob.jpg');
         });
     }, 4000);
 }
@@ -198,20 +198,20 @@ function resPass() {
         $('#pass-button').parent().append('<p class=\'errtext\'>Сначала устраните ошибки.</p>');
         return;
     }
-    $('#pass-restore').append('<div id=\'shadow\'></div><img id=\'loading\' alt=\'Loading...\' src=\'/images/loading.png\' />');
+    $('#pass-restore').append('<div id=\'shadow\'></div><img id=\'loading\' alt=\'Loading...\' src=\'/darksite/images/loading.png\' />');
     setTimeout(rotate, 10, '#loading', 1, 10);
     setTimeout(function() {
-        $.ajax({url: '/parts/pass.html', async: true}).done(function(html) {
+        $.ajax({url: '/darksite/parts/pass.html', async: true}).done(function(html) {
             $('#shadow').remove();
             $('#loading').remove();
             $('#pass-restore').html(html.replace('{name}', $('#uname').val()));
-            if (device.mobile()) $('#pass-restore .big-img').attr('src', '/images/dog-mob.jpg');
+            if (device.mobile()) $('#pass-restore .big-img').attr('src', '/darksite/images/dog-mob.jpg');
         });
     }, 4000);
 }
 
 function showRules() {
-    $.ajax({url: '/parts/rules.html', async: true}).done(function(html) {
+    $.ajax({url: '/darksite/parts/rules.html', async: true}).done(function(html) {
         $('#register').append(html);
         if (device.mobile()) $('#rulbox').animate({left: '+=154%'}, 'slow');
         else $('#rulbox').animate({left: '+=200%'}, 'slow', function() {

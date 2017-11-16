@@ -1,5 +1,5 @@
 /* СТРАНИЦА */
-body {margin: 0; padding: 0; color: #D4CAAB; font-family: sefif; font-size: 16px; background: url(/images/bg.jpg) no-repeat #15151D; background-size: cover; background-position: center; background-attachment: fixed; overflow-x: hidden;}
+body {margin: 0; padding: 0; color: #D4CAAB; font-family: sefif; font-size: 16px; background: url(/darksite/images/bg.jpg) no-repeat #15151D; background-size: cover; background-position: center; background-attachment: fixed; overflow-x: hidden;}
 a {color: #E6F5E9; text-decoration: none; border-bottom: 1px solid #E6F5E9; transition: all 400ms linear;}
 a:hover {border-top: 1px dashed #E6F5E9; border-bottom: 1px dashed #E6F5E9; text-shadow: 0 0 10px #BEEDC6;}
 a:active {border: 1px dotted #E6F5E9; color: white; font-weight: bold;}
@@ -18,7 +18,7 @@ blockquote {font-family: sans;}
 code {padding: 3px; color: #E3B8B3; border: 1px solid #302222; border-radius: 4px; font-family: monospace;}
 pre {font-family: monospace; font-size: 14px; color: #E3B8B3;}
 header, footer {margin: 10px auto; padding: 5px; clear: both;}
-header {width: 600px; height: 90px; border-radius: 10px; text-align: center; background: url(/images/header.jpg) no-repeat; background-size: cover; background-position: center;}
+header {width: 600px; height: 90px; border-radius: 10px; text-align: center; background: url(/darksite/images/header.jpg) no-repeat; background-size: cover; background-position: center;}
 footer {width: 300px; height: 20px; border-radius: 8px; opacity: 0.95; background: black; font-size: 12px;}
 /* ОБЩИЕ КЛАССЫ */
 .lightbox {box-shadow: 0 0 10px white;}
