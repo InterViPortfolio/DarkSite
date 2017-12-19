@@ -30,11 +30,13 @@ if (!isLoaded) {
     }
 }
 
+/*
 if (device.mobile() && document.body.clientWidth >= 1050) {
     $.ajax({url: '/darksite/css/mobile.css', async: true}).done(function(mcss) {
-        $('#head').append('<style id=\'jsmobile\'>' + mcss.substring(mcss.indexOf('{') + 1, mcss.lastIndexOf('}')) + '</style>');
+        $('#head').append('<style id=\'jsmobile\'>' + mcss + '</style>');
     });
 }
+*/
 
 function loadComments() {
     $.ajax({url: '/darksite/parts/comments.html', async: true}).done(function(html) {
